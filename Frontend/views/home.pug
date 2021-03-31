@@ -1,0 +1,362 @@
+doctype html
+html
+  head
+    title FACE LOG
+    link(rel='stylesheet', type='text/css', href='../stylesheets/style.css')
+    link(rel='stylesheet', type='text/css', href='../stylesheets/overlay.css')
+    script(type='text/javascript').
+      function valid()
+      {
+      var name = document.forms["Msg"]["Name"];
+      var email = document.forms["Msg"]["EMail"];
+      var phone = document.forms["Msg"]["Telephone"];
+      var msg = document.forms["Msg"]["Message"];
+      var regex = /[a-zA-Z]+$/;
+      var reg = /([0-9]{10})+$/;
+      if (name.value == "")
+      {
+      window.alert("Please enter your name.");
+      name.focus();
+      return false;
+      }
+      if(regex.test(name.value) == false)
+      {
+      window.alert("Name must be in letters only");
+      name.focus();
+      return false;
+      }
+      if (email.value == "")
+      {
+      window.alert("Please enter a valid e-mail address.");
+      email.focus();
+      return false;
+      }
+      if (email.value.indexOf("@", 0) < 0)
+      {
+      window.alert("Please enter a valid e-mail address.");
+      email.focus();
+      return false;
+      }
+      if (email.value.indexOf(".", 0) < 0)
+      {
+      window.alert("Please enter a valid e-mail address.");
+      email.focus();
+      return false;
+      }
+      if (phone.value == "")
+      {
+      window.alert("Please enter your telephone number.");
+      phone.focus();
+      return false;
+      }
+      if(reg.test(phone.value) == false)
+      {
+      window.alert("Phone No. must be in number of 10 digits");
+      phone.focus();
+      return false;
+      }
+      if (msg.value == "")
+      {
+      window.alert("Please enter a Message you want to send.");
+      name.focus();
+      return false;
+      }
+      else
+      {
+      window.alert("Message Sent Successfully..!");
+      }
+      return true;
+      }
+  body
+    .overlay
+      .menu
+        ul
+          li.h
+            a(href='#home', data-text='HOME') HOME
+          li
+            a(href='#service', data-text='SERVICES') SERVICES
+          li
+            a(href='#classes', data-text='DATA') DATA
+          li
+            a(href='#price', data-text='ABOUT US') ABOUT US
+          li
+            a(href='#contact', data-text='CONTACT') CONTACT
+          li
+            a(href='/', data-text='SIGN OUT', style="color: #00aeff") SIGN OUT
+          br
+          br
+          br
+          li
+            a
+              .strip
+    // Start Header
+    | /*
+    header
+      .container
+        .logo
+          a(href='')
+            | FACE 
+            span LOG
+        a.ham-burger(href='javascript:void(0)')
+          span
+          span
+          span
+    // End Header
+    // Start Home
+    section#home.home.wow.flash
+      .wrapper
+        .box1 CODER
+        .box1 DEVELOPER
+        .box1 SQLite
+        .box1 CSS
+        .box1 Face Detection
+        .box1 OpenCV
+        .box1 JS
+        .box1 ML
+        .box1 NodeJs
+        .box1 PYTHON
+      // go down
+      a.go-down(href='#about')
+        i.fa.fa-angle-down(aria-hidden='true')
+      // go down
+      // End Home
+      // Start Service
+      section#service.service
+        .container
+          .content
+            .text.box.wow.slideInLeft
+              h2 About Project
+              p
+                | This is a software based project that deals with face recognition of a customer
+                | and displays relevant details such as count of new customers & repeated customers.
+                | Along with this it also displays the age, gender and emotions of the customer.
+              p
+                | This product is suitable for any retail shop that regularly deals with customers.
+                | By using OpenCV, python and face recognition modules this software aims at providing reliable customer data.
+                | This product uses up to date technology to optimize its performance.
+            .accordian.box.wow.slideInRight
+              .accordian-container.active
+                .head
+                  h4 Face Detection
+                  span.fa.fa-angle-down
+                .body
+                  p
+                    | For Face detection we have used the concept of landmarks which will let you detect landmarks of detected face.
+                    | Once the face will be detected it will be compared with the previous data. If the face is matched then it will be stored in 'known'
+                    | folder and if not matched then it will be stored in the 'unknown' folder. By comparison it will thus inform whether the customer is repeated or not.
+              .accordian-container
+                .head
+                  h4 Data Analyses
+                  span.fa.fa-angle-up
+                .body
+                  p
+                    | We have used the pre-trained models that helps in the analysis of gender, age and emotions of the detected faces.
+                    | We have written code that would predict the Age (Different age groups 11-15, 16-20,21-25 etc.),
+                    | Sentiments (happy, sad, angry etc.), Gender and landmarks.
+              .accordian-container
+                .head
+                  h4 Database
+                  span.fa.fa-angle-up
+                .body
+                  p
+                    | We have used SQLite for database management and for visualising the data we have used DB Browser.
+                    | As soon as the face will be detected, it will be stored in the database along with its details
+                    | like unique ID, age, emotions and gender.We have created 3 tables - customer_master,
+                    | location_master and visit_register. We have designed the schema in such a way that user can access the data easily.
+              .accordian-container
+                .head
+                  h4 Frontend Work
+                  span.fa.fa-angle-up
+                .body
+                  p
+                    | Our Frontend work includes the designing of website which can be used by the admins to see the statistical data of their customers.
+                    | Along with the details of customer, the website includes the details about entire project and its developers.
+      // End Service
+      // Start Classes
+      section#classes.classes
+        center
+          h2 Data
+          br
+          button(onclick='sendReqForCustomerData()')#dataButton Customer Data
+          button(onclick='sendReqForVisitData()')#dataButton Visit Register
+          button(onclick='sendReqForLocationData()')#dataButton Location Table
+          br
+          br
+          table#newTable
+      center
+        h2(style='font-size: 35px') Data Statistics
+        br
+        select(onchange="sendReqforChart('bar', this.value, null)")
+          option(value="" selected) Please Choose
+          option(value="sentimentStatistics") Sentiment Statistics
+          option(value="newVold") New Customer Vs Repeated Customer
+          option(value="maleVfemale") Male Vs Female Ratio
+          option(value="ageDistribution") Age Distribution
+        br  
+        br
+
+        div#chartOptions
+        p Please Select Chart Options
+        br
+        select(onchange="", id="date")
+          option(selected) Please Choose
+          option(value="week") This Week
+          option(value="month") This Month
+          option(value="year") This Year
+          option(value="all") All
+        br
+        br
+        select(onchange="", id="chartType")
+          option(selected) Please Choose
+          option(value="pie") Pie Chart
+          option(value="line") Line Graph
+          option(value="bar") Bar Graph
+        br
+        br
+        div#chartButton
+          canvas#myCanvas
+              
+      // End Classes
+      // Start about
+      section#price.price-package
+        .container
+          h2 About the Developers
+          .content
+            .box.wow.bounceInUp
+              .inner
+                #Loss.price-tag
+                  | RUDRA BARAD
+                .img
+                  img(src='../images/rudra.jpg', alt='RUDRA')
+                .text
+                  h3 18DCS007
+                  p Face Recognition
+                  p Web Application
+                  a.btn(href='https://www.linkedin.com/in/rudra-barad/', target='_blank') Profile
+            .box.wow.bounceInUp
+              .inner
+                #Build.price-tag
+                  | VARUN SHAH
+                .img
+                  img(src='../images/varun.jpg', alt='VARUN')
+                .text
+                  h3 18DCS114
+                  p Age & Gender Analysis
+                  p Sentiment Analysis
+                  a.btn(href='https://www.linkedin.com/in/varun-shah-1467411b2/') Profile
+            .box.wow.bounceInUp
+              .inner
+                #Transform.price-tag
+                  | JUHIE MOTIANI
+                .img
+                  img(src='../images/juhie.jpg', alt='JUHIE')
+                .text
+                  h3 18DCS051
+                  p Backend Developer
+                  p Node JS & Express
+                  a.btn(href='https://www.linkedin.com/in/juhie-motiani-3530b8188/') Profile
+          br
+          br
+          .content
+            .box.wow.bounceInUp
+              .inner
+                #Loss.price-tag
+                  | MANAN JOSHI
+                .img
+                  img(src='../images/manan.jpg', alt='MANAN')
+                .text
+                  h3 18DCS030
+                  p Face Recognition
+                  p Web Application
+                  a.btn(href='https://www.linkedin.com/in/manan-joshi-3b475a199/', target='_blank') Profile
+            .box.wow.bounceInUp
+              .inner
+                #Build.price-tag
+                  | DHRUTI PATEL
+                .img
+                  img(src='../images/dhruti.jpg', alt='DHRUTI')
+                .text
+                  h3 18DCS066
+                  p Age & Gender Analysis
+                  p Sentiment Analysis
+                  a.btn(href='https://www.linkedin.com/in/dhruti-patel-398157170/') Profile
+            .box.wow.bounceInUp
+              .inner
+                #Transform.price-tag
+                  | ANJALI PATEL
+                .img
+                  img(src='../images/anjali.JPG', alt='ANJALI')
+                .text
+                  h3 18DCS064
+                  p Backend Developer
+                  p Node JS & Express
+                  a.btn(href='https://www.linkedin.com/in/anjali-patel-6536a916b/') Profile
+      // End Price
+      // Start Contact
+      section#contact.contact
+        .container
+          .content
+            .box.form.wow.slideInLeft
+              form(name='Msg', autocomplete='off', onsubmit='return valid()', method='post')
+                #msg Leave A Message
+                br
+                br
+                input(type='text', required='', name='Name', placeholder='Enter Name')
+                input(type='text', required='', name='EMail', placeholder='Enter Email')
+                input(type='text', required='', name='Telephone', placeholder='Enter Mobile')
+                textarea(placeholder='Enter Message', required='', name='Message')
+                input#msgbtn(type='submit', value='Submit', name='Submit')
+            .box.text.wow.slideInRight
+              h2#msg ZipBooks Software Solutions Pvt. Ltd
+              br
+              p.title-p
+                | A truly ascendable & extensible solution with the ability to grow with your busines.
+                br
+                br
+                | Come and Visit us personally for further information. You can reach us at the given address. We would like to answer your call and can also help you by E-mail.
+              .info
+                ul
+                  li
+                    span.fa.fa-map-marker
+                    | 410, Pinnacle Business Park, Corporate Road, Prahladnagar, Ahmedabad 380015. Gujarat. India
+                  li
+                    span.fa.fa-phone
+                    |  +91 79 40037105
+                  li
+                    span.fa.fa-envelope
+                    | zipbooks@gmail.com
+              br
+              .social-buttons.pt-5
+                a(href='tel:', target='_blank')
+                  i.fa.fa-phone
+                a(href='mailto:info@zipbooks.in', target='_blank')
+                  i.fa.fa-envelope
+                a(href='https://www.facebook.com/Zipbookssoftware', target='_blank')
+                  i.fa.fa-facebook
+                a(href='https://www.linkedin.com/company/zipbooks-software-solutions-pvt--ltd/', target='_blank')
+                  i.fa.fa-linkedin
+                a(href='https://twitter.com/cloudzipbooks', target='_blank')
+                  i.fa.fa-twitter
+                br
+                br
+      // End Contact
+      // jquery
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+      script.
+        $(document).ready(function(){
+        $(".ham-burger,.menu ul").click(function(){
+        $('.overlay').slideToggle(700);
+        $(".ham-burger").toggleClass("active");
+        })
+        $(".accordian-container").click(function(){
+        $(".accordian-container").children(".body").slideUp();
+        $(".accordian-container").removeClass("active")
+        $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+        $(this).children(".body").slideDown();
+        $(this).addClass("active")
+        $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+        })
+        })
+script(src='/javascripts/poc.js')
+script(src='/javascripts/charts.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js')

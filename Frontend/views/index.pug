@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title FACE LOG
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', type='text/css', media='screen', href='../stylesheets/login.css')
+    link(href='https://fonts.googleapis.com/css?family=Poppins:600&display=swap', rel='stylesheet')
+    script(src='https://kit.fontawesome.com/a81368914c.js')
+    script.
+      function login() {
+      uid = document.getElementById("username").value
+      pass = document.getElementById("password").value
+      homeLink = document.getElementById("homePageLink")
+      if (uid == "face" && pass == "recognition")
+      {
+      locationn.href="/home"
+      }
+      else{
+      alert("Invalid User Id or Password ! Please Try Again")
+      homeLink.setAttribute("href","/");
+      }
+      }
+  body
+    img.wave(src='../images/face.jpg', alt='')
+    //
+      -<div class="container">
+      <div class="img">
+      <img src="pic2.svg" alt="">
+      </div>
+      </div>
+    .login-container
+      form(action='/home/login')
+        img.avatar(src='../images/user.jpg', alt='')
+        h2 FACE LOG
+        .input-div.one
+          .i
+            i.fas.fa-user
+          div
+            h5 Username
+            input#username.input(type='text', required='', name="uid")
+        .input-div.two
+          .i
+            i.fas.fa-lock
+          div
+            h5 Password
+            input#password.input(type='password', required='', name="pass")
+        a(href='#') Forget Password?
+        button.btn(type='button', value='Login', onclick='login()')
+          a(href='/home')#homePageLink LOGIN
+    script(type='text/javascript', src='../javascripts/login.js')
