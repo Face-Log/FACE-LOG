@@ -33,5 +33,5 @@ For viewing or downloading video click [here](https://drive.google.com/file/d/1y
 ## Facing any issues?
 Feel free to [open an issue](https://github.com/Face-Log/FACE-LOG/issues/new?assignees=&labels=Query&title=Query). We are glad to help you. ❤️
 
-## License
+## Licens
 Project is published under the [MIT license](https://github.com/Face-Log/FACE-LOG/blob/main/LICENSE).
