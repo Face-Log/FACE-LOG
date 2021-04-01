@@ -23,4 +23,4 @@
 Feel free to [open an issue](https://github.com/Face-Log/FACE-LOG/issues/new?assignees=&labels=Query&title=Query). We am glad to help you. ❤️
 
 ## License
-Project is published under the [MIT license](LICENSE.md).
+Project is published under the [MIT license](https://github.com/Face-Log/FACE-LOG/blob/main/LICENSE).
