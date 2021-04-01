@@ -19,12 +19,13 @@
 - [Backend](https://github.com/Face-Log/FACE-LOG/tree/main/Backend)
 - [Frontend](https://github.com/Face-Log/FACE-LOG/tree/main/Frontend)
 - [PPT](https://github.com/Face-Log/FACE-LOG/blob/main/Face%20Log%20PPT.pptx)
-- [Readme](https://github.com/Face-Log/FACE-LOG/blob/main/README.md)
-- [Documentation](https://github.com/Face-Log/FACE-LOG/wiki)
+- [Readme](https://github.com/Face-Log/FACE-LOG#face-log)
+- [Documentation](https://github.com/Face-Log/FACE-LOG#documentation)
+- [Video Deomstation](https://github.com/Face-Log/FACE-LOG#face-log)
 
 
 ## Documentation
-For detailed documentation and roadmap of our project please got to [Wiki](https://github.com/Face-Log/FACE-LOG/wiki) of this repository
+For detailed documentation and roadmap of our project please got to [Wiki](https://github.com/Face-Log/FACE-LOG/wiki/0.-Home) of this repository
 
 ## Video
 For viewing or downloading video click [here](https://drive.google.com/file/d/1ylncxQkNbjXSYQU2z5LE2ecVuzTwaLat/view?usp=sharing) :clapper:
