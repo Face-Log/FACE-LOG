@@ -17,10 +17,17 @@
 - [Frontend](https://github.com/Face-Log/FACE-LOG/tree/main/Frontend)
 - [PPT](https://github.com/Face-Log/FACE-LOG/blob/main/Face%20Log%20PPT.pptx)
 - [Readme](https://github.com/Face-Log/FACE-LOG/blob/main/README.md)
+- [Documentation](https://github.com/Face-Log/FACE-LOG/wiki)
 
+
+## Documentation
+For detailed documentation and roadmap of your project please got to [Wiki](https://github.com/Face-Log/FACE-LOG/wiki) of this repository
+
+## Video
+For viewing or downloading video click [here](https://drive.google.com/file/d/1ylncxQkNbjXSYQU2z5LE2ecVuzTwaLat/view?usp=sharing) :clapper:
 
 ## Facing any issues?
-Feel free to [open an issue](https://github.com/Face-Log/FACE-LOG/issues/new?assignees=&labels=Query&title=Query). We am glad to help you. ❤️
+Feel free to [open an issue](https://github.com/Face-Log/FACE-LOG/issues/new?assignees=&labels=Query&title=Query). We are glad to help you. ❤️
 
 ## License
 Project is published under the [MIT license](https://github.com/Face-Log/FACE-LOG/blob/main/LICENSE).
