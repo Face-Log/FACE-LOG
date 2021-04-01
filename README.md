@@ -12,9 +12,9 @@
 ![](https://img.shields.io/badge/Fork-If_you_found_interesting-%23FF0000.svg?&style=flat&logoColor=white&color=white)<br>
 </div>  -->
 
+<img align="right" alt="GIF" height=280 src="https://4.bp.blogspot.com/-5SENSezzuGg/XKBQ8VEQ8YI/AAAAAAAAAdQ/mnyBrO1Lah8dm84cqlC7zn4nPsxMTk98QCLcBGAs/s400/80E1A6AA103BA2A4D556EB57B0DE4B0EA8BC184A_size468_w600_h400%2B%25281%2529.gif"/>
 
 ## Contents of the Repository
-<img align="right" alt="GIF" height=280 src="https://4.bp.blogspot.com/-5SENSezzuGg/XKBQ8VEQ8YI/AAAAAAAAAdQ/mnyBrO1Lah8dm84cqlC7zn4nPsxMTk98QCLcBGAs/s400/80E1A6AA103BA2A4D556EB57B0DE4B0EA8BC184A_size468_w600_h400%2B%25281%2529.gif" /><br>
 - [Backend](https://github.com/Face-Log/FACE-LOG/tree/main/Backend)
 - [Frontend](https://github.com/Face-Log/FACE-LOG/tree/main/Frontend)
 - [PPT](https://github.com/Face-Log/FACE-LOG/blob/main/Face%20Log%20PPT.pptx)
