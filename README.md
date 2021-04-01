@@ -25,7 +25,7 @@
 
 
 ## Documentation
-For detailed documentation and roadmap of our project please got to [Wiki](https://github.com/Face-Log/FACE-LOG/wiki/0.-Home) of this repository
+For detailed documentation and roadmap of our project please got to [Wiki](https://github.com/Face-Log/FACE-LOG/wiki/0.-Home) of this repository.
 
 ## Video
 For viewing or downloading video click [here](https://drive.google.com/file/d/1ylncxQkNbjXSYQU2z5LE2ecVuzTwaLat/view?usp=sharing) :clapper:
@@ -33,5 +33,5 @@ For viewing or downloading video click [here](https://drive.google.com/file/d/1y
 ## Facing any issues?
 Feel free to [open an issue](https://github.com/Face-Log/FACE-LOG/issues/new?assignees=&labels=Query&title=Query). We are glad to help you. ❤️
 
-## Licens
+## License
 Project is published under the [MIT license](https://github.com/Face-Log/FACE-LOG/blob/main/LICENSE).
