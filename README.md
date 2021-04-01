@@ -13,6 +13,14 @@
 </div>  -->
 
 ## Contents of the Repository
+- [Backend](https://github.com/Face-Log/FACE-LOG/tree/main/Backend)
+- [Frontend](https://github.com/Face-Log/FACE-LOG/tree/main/Frontend)
+- [PPT](https://github.com/Face-Log/FACE-LOG/blob/main/Face%20Log%20PPT.pptx)
+- [Readme](https://github.com/Face-Log/FACE-LOG/blob/main/README.md)
+
+
+## Facing any issues?
+Feel free to [open an issue](https://github.com/Face-Log/FACE-LOG/issues/new?assignees=&labels=Query&title=Query). We am glad to help you. ❤️
 
 ## License
-Project is published under the [MIT license](/LICENSE.md).
+Project is published under the [MIT license](LICENSE.md).
