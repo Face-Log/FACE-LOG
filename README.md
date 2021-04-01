@@ -21,7 +21,7 @@
 - [PPT](https://github.com/Face-Log/FACE-LOG/blob/main/Face%20Log%20PPT.pptx)
 - [Readme](https://github.com/Face-Log/FACE-LOG#face-log)
 - [Documentation](https://github.com/Face-Log/FACE-LOG#documentation)
-- [Video Deomstation](https://github.com/Face-Log/FACE-LOG#face-log)
+- [Video Deomstation](https://github.com/Face-Log/FACE-LOG#video)
 
 
 ## Documentation
